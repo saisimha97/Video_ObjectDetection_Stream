@@ -1,0 +1,21 @@
+Here the task is to detect a human face from a webcam video stream and render it on a webpage
+
+lets first check to render it onto a web page with any sort of detection (run SimpleWebStream.java)
+1. Here we take snaps of videos using classes of OpenCV library
+2. Using flask we render it on localhost by instantiating the  VideoCamera object and call the image snap function again and again (yield keyword)
+
+Now after the first run is successful. The human face detection using tensorflow object detection API can be achieved by using pre-trained models 
+on COCO dataset or training the primitive model and getting the desired Confusion Matrix
+
+We are choosing Pre-trained model using Object Detection API:
+
+We have a frozen model which ran over coco dataset from tensorflow object detection API which is used for our case which internally contains AlexNets(CNN)
+as their classifiers
+
+All the graph definition, Weights, and biases of the model are in serialized through google's ProtoBuf(Protocol Buffer)
+
+After configuring the required and parameters we get back the parameters of boxes and percentage accuracy of detection
+These boxes are finally appended
+
+Finally, the image is rendered on the webpage
+
