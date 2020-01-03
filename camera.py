@@ -7,7 +7,7 @@ class VideoCamera(object):
     
     def __del__(self):
         self.video.release()
-
+# virat
     def get_frame(self):
         success, image = self.video.read()
         ret, jpeg = cv2.imencode('.jpg', image)
