@@ -8,6 +8,7 @@ class VideoCamera(object):
     def __del__(self):
         self.video.release()
 
+
 # set
     def get_frame(self):
         success, image = self.video.read()
